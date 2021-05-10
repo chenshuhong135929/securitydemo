@@ -21,12 +21,12 @@ public class TestController {
     return  "hello security";
   }
 
-  @PostMapping("index")
+  @RequestMapping("index")
   public String index(){
     return  "hello security  index";
   }
 
-  @GetMapping("update")
+  @RequestMapping("update")
   //注解,有该权限的才能访问
   @Secured({"ROLE_sale"})
   @PreAuthorize("hasRole('ROLE_sale')")
